@@ -1,0 +1,252 @@
+@font-face {
+    font-family: 'HandwrittenFont';
+    src: url('path-to-font.woff2') format('woff2');
+}
+
+.handwritten-text {
+    font-family: 'HandwrittenFont', cursive;
+    font-family: 'Indie Flower', cursive;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #DBD7B6;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: #DBD7B6;
+    background-color: #2C2E39;
+    /* place-content: center;
+    place-items: center; */
+}
+
+#section1 {
+    position: absolute;
+    /* top: -50%; */
+    padding: 0;
+    margin: 0;
+    height: 100vh; 
+    width: 100vw;
+    background-color: #2C2E39;
+    /* background: url('images/grey-book-2.jpg'); */
+    /* background: url('images/notebook3.jpeg'); */
+    background-size: cover;
+    /* background-position: center; */
+    /* animation: go_up2 1.5s ease-in 13.2s forwards; */
+}
+@keyframes go_up2 {
+    0% {
+        top: 0%;
+    }100% {
+        top: -100%;
+    }
+}
+
+h1 {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 5em;
+    letter-spacing: 0.3em;
+    /* animation: go_up 3s ease-out 8s forwards; */
+    /* background-color: rgba(100,100,100,0.2); */
+    -webkit-box-reflect: below -0.42em linear-gradient(transparent, #0004); /* reflection */
+}
+@keyframes go_up {
+    20%, 100% {
+        opacity: 0;
+    }
+    100% {
+        top: -20%;
+        display: none;
+    }
+}
+
+h1 span {
+    display: inline-block;
+    /* opacity: 0; */
+    /* animation: swivel 1s linear forwards; */
+    /* text-shadow: 0 0 3px #000, 0 0 5px #000; */
+    text-shadow: 0 0 10px #808080, 0 0 10px #808080;
+}
+@keyframes swivel {
+    0% {
+        opacity: 0;
+        transform: rotateY(90deg);
+        filter: blur(5px);
+    }
+    100% {
+        opacity: 1;
+        transform: rotateY(0);
+        filter: blur(0);
+    }
+}
+
+h1 span:nth-child(7) {
+    text-decoration: line-through;
+    color: red;
+}
+h1 span:nth-child(8) {
+    text-decoration: line-through;
+    color: red;
+}
+h1 span:nth-child(9) {
+    text-decoration: line-through;
+    color: red;
+}
+h1 span:nth-child(10) {
+    text-decoration: line-through;
+    color: red;
+}
+h1 span:nth-child(11) {
+    text-decoration: line-through;
+    color: red;
+}
+h1 span:nth-child(12) {
+    text-decoration: line-through;
+    color: red;
+}
+
+#motto_container{
+    height: auto;
+    width: 50%;
+    border: solid black 5 pt;
+    /* background-color: blueviolet; */
+    /* place-content: center;
+    place-items: center; 
+    align-items: center; */
+    text-align: center;
+    /* display: none; */
+}
+@keyframes appear_up {
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        top: 37%;
+    }
+}
+
+#motto_svg {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    /* display: none; */ 
+    animation: appear_up 2s ease-out 7.9s forwards;
+}
+
+#motto_text {
+    max-width: 80vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100vw;
+    opacity: 0;
+    /* display: none; */ 
+    /* animation: appear_up 2s ease-out 7.9s forwards; */
+    font-size: 4.5em;
+    letter-spacing: 0.05em;
+    /* text-shadow: -1px 1px 0 #000,
+                          1px 1px 0 #000,
+                         1px -1px 0 #000,
+                        -1px -1px 0 #000; */
+    text-shadow: 0 0 7px #000, 0 0 7px #000;
+    text-shadow: 0 0 10px #000, 0 0 10px #808080;
+}
+
+#motto_text span {
+    position: relative;
+    display: inline-block;
+}
+
+#contd1 {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /* animation: appear 2s ease-out 10.5s forwards; */
+    opacity: 0;
+}
+@keyframes appear {
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
+/* -------------------- */
+
+#section2 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -10%;
+}
+@keyframes forward2 {
+    0% {
+        left: -10%;
+    }
+    100% {
+        left: 20%;
+    }
+}
+
+#man {
+    background: url('images/walking.png');
+    /* height: 128px;
+    width: 75px; */
+    height: 256px;
+    width: 150px;
+    background-size: cover;
+    /* position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10%; */
+    /* animation: walk 0.8s steps(12) forwards 6.5, forward forwards 5s linear; */
+}
+@keyframes walk {
+    0% {
+        background-position: 1500px;
+    }
+    100% {
+        background-position: -300px;
+    }
+}
+
+@keyframes forward {
+    0% {
+        transform: translateX(-100px);
+    }
+    100% {
+        transform: translateX(500px);
+    }
+}
+
+.roadStyle {
+    background: url("images/roadside2.png");
+    /* height: 100vh;
+    width: 100vw; */
+    background-size: cover;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
